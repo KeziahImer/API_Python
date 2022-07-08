@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask_restx import Api
-from documented_api.hello_world import namespace as hello_world_ns
+from routes.documented_api.health import namespace as health_ns
 
 blueprint = Blueprint('documented_api', __name__, url_prefix='/documented_api')
 
@@ -12,4 +12,4 @@ api_extension = Api(
     doc='/doc'
 )
 
-api_extension.add_namespace(hello_world_ns)
+api_extension.add_namespace(health_ns)
