@@ -39,5 +39,4 @@ def emailValidation():
             if is_letter(char) != 1:
                 return 'False'
         prev = char
-        print(prev)
     return 'True'
