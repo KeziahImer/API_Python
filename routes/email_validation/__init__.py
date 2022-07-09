@@ -18,14 +18,14 @@ def emailValidation():
     for char in email:
         if step == 0:
             if char == '@' or char == '.':
-                return 'False'
+                return {'result': 'False'}
             else:
                 step = 1
         elif step == 1:
             if char == '.' and prev == '.':
-                return 'False'
+                return {'result': 'False'}
             elif char == '@' and prev == '.':
-                return 'False'
+                return {'result': 'False'}
             elif char == '@':
                 step = 2
         elif step == 2:
@@ -34,9 +34,9 @@ def emailValidation():
             elif char == '.':
                 step = 3
             else:
-                return 'False'
+                return {'result': 'False'}
         else:
             if is_letter(char) != 1:
-                return 'False'
+                return {'result': 'False'}
         prev = char
-    return 'True'
+    return {'result': 'True'}
