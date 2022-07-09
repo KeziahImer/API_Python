@@ -6,8 +6,8 @@ namespace = Namespace('emailValidation', 'Checking if the email is good formated
 @namespace.route('')
 class emailValidation(Resource):
 
-    @namespace.param('Query String', 'http://ipadress:port/emailValidation?email=youremail')
-    @namespace.response(False, 'Email is not valid')
-    @namespace.response(True, 'Email is valid')
+    @namespace.param('email', 'Example : test@gmail.com')
+    @namespace.response(200, 'API sent a response')
+    @namespace.response(500, 'Internal Server Error')
     def post(self):
-        'Checking email'
+        'Give an email in parameters and it says if it is good formated or not'

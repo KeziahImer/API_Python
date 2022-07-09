@@ -9,4 +9,4 @@ class longestCommonStreak(Resource):
     @namespace.response(200, 'Gave all longest common streak')
     @namespace.response(505, 'Internal Server Error')
     def post(self):
-        'Longest Common Streak'
+        'Give words and it gives back the longest common streak'
