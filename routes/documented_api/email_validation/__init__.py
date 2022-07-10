@@ -1,5 +1,4 @@
-from flask import request
-from flask_restx import Namespace, Resource, fields
+from flask_restx import Namespace, Resource
 
 namespace = Namespace('emailValidation', 'Checking if the email is good formated')
 

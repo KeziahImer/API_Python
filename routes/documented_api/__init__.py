@@ -11,7 +11,7 @@ api_extension = Api(
     blueprint,
     title='API',
     version='1.0',
-    description='Just a Flask RESTX API',
+    description='A Flask RESTX API',
     doc='/doc'
 )
 
