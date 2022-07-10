@@ -9,7 +9,7 @@ app.config['RESTX_MASK_SWAGGER'] = False
 
 @app.route('/')
 def home():
-    return
+    return redirect('/doc')
 
 app.register_blueprint(health)
 app.register_blueprint(lcs)
