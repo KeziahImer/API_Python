@@ -5,7 +5,7 @@ from routes.documented_api.health import namespace as health_ns
 from routes.documented_api.longest_common_streak import namespace as lcs_ns
 from routes.documented_api.email_validation import namespace as emailValidation_ns
 
-blueprint = Blueprint('documented_api', __name__, url_prefix='/documented_api')
+blueprint = Blueprint('documented_api', __name__, url_prefix='/')
 
 api_extension = Api(
     blueprint,

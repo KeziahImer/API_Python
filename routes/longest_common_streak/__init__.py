@@ -3,8 +3,7 @@ import json
 
 blueprint = Blueprint('longestCommonStreak', __name__, url_prefix='/longestCommonStreak')
 
-def compare(first, second, result):
-    name = first + ' and ' + second
+def compare(first, second):
     i = 0
     j = 0
     max = 0
@@ -28,9 +27,7 @@ def compare(first, second, result):
             j += 1
         i += 1
         j = 0
-
-    result[name]=lcs
-    return result
+    return lcs
 
 @blueprint.route('', methods=['POST'])
 def longestCommonStreak():
@@ -41,7 +38,9 @@ def longestCommonStreak():
     for word in list:
         new_cpt = cpt
         while new_cpt < len(list):
-            result = compare(word, list[new_cpt], result)
+            name = str(cpt) + ' et ' + str(new_cpt + 1)
+            lcs = compare(word, list[new_cpt])
+            result[name]=lcs
             new_cpt += 1
         cpt += 1
     return json.dumps(result) 
