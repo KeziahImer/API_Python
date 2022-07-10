@@ -3,4 +3,8 @@ Pour lancer l'API :
 
 . venv/bin/activate
 
-python3 main.py
+export FLASK_APP=main.py
+
+export FLASK_APP=main.py
+
+flask run
